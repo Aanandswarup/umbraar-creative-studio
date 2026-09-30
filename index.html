@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UMBRA® — Studio for digital craft</title>
+<meta name="description" content="UMBRA is a creative technology studio in London. We design and engineer digital work with a point of view: art direction, directed motion and code that holds 60fps on a mid-range phone.">
+<meta name="theme-color" content="#08090a">
+<meta name="color-scheme" content="dark light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2308090a'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='20' fill='%23f1eee5'%3EU%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/motion.css">
+
+<!-- Set the JS flag before first paint so hidden reveal states never flash. -->
+<script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#manifesto">Skip to content</a>
+
+<!-- =====================================================================
+     PRELOADER
+     ===================================================================== -->
+<div class="preloader" data-preloader role="status" aria-live="polite" aria-label="Loading">
+  <div class="preloader__top">
+    <span class="mono">UMBRA® — Studio for digital craft</span>
+    <span class="mono">London, UK — 51.5072°N</span>
+  </div>
+
+  <div class="preloader__body">
+    <span class="mono" data-preloader-status>Compiling shaders</span>
+    <span class="preloader__count" data-preloader-count>000</span>
+    <span class="preloader__bar"><i data-preloader-bar></i></span>
+  </div>
+
+  <div class="preloader__foot">
+    <span class="mono">Zero dependencies</span>
+    <span class="mono">Est. 2016</span>
+  </div>
+</div>
+
+<!-- =====================================================================
+     CHROME
+     ===================================================================== -->
+<div class="grain" aria-hidden="true"></div>
+
+<div class="cursor" data-cursor aria-hidden="true">
+  <span class="cursor__dot" data-cursor-dot><em class="cursor__label" data-cursor-label></em></span>
+</div>
+
+<div class="progress" aria-hidden="true">
+  <span class="mono progress__num" data-progress-num>00</span>
+  <span class="progress__line"><i data-progress-line></i></span>
+  <span class="mono progress__label">Scroll</span>
+</div>
+
+<aside class="rail" aria-hidden="true">
+  <span class="mono rail__value" data-rail-value>01 — Hero</span>
+</aside>
+
+<header class="header" data-header>
+  <a class="header__logo" href="#hero" aria-label="UMBRA, back to top">
+    Umbra<sup>®</sup>
+  </a>
+
+  <nav class="header__nav mono" aria-label="Primary">
+    <a href="#work"><span class="link-swap"><span class="link-swap__inner">Work</span></span></a>
+    <a href="#manifesto"><span class="link-swap"><span class="link-swap__inner">Studio</span></span></a>
+    <a href="#capabilities"><span class="link-swap"><span class="link-swap__inner">Capabilities</span></span></a>
+    <a href="#recognition"><span class="link-swap"><span class="link-swap__inner">Recognition</span></span></a>
+  </nav>
+
+  <div class="header__meta">
+    <span class="mono header__clock" data-clock>--:--:--</span>
+    <button class="menu-btn mono" type="button" data-menu-btn aria-expanded="false" aria-controls="menu">
+      <span class="menu-btn__bars" aria-hidden="true"><i></i><i></i></span>
+      <span data-menu-btn-label>Menu</span>
+    </button>
+  </div>
+</header>
+
+<!-- Overlay navigation -->
+<div class="menu" id="menu" data-menu role="dialog" aria-modal="true" aria-label="Site navigation">
+  <nav class="menu__list" aria-label="Overlay">
+    <a class="menu__link" href="#work"><span>01</span> Work</a>
+    <a class="menu__link" href="#manifesto"><span>02</span> Studio</a>
+    <a class="menu__link" href="#capabilities"><span>03</span> Capabilities</a>
+    <a class="menu__link" href="#process"><span>04</span> Process</a>
+    <a class="menu__link" href="#contact"><span>05</span> Contact</a>
+  </nav>
+
+  <div class="menu__foot">
+    <div class="mono">
+      <p>New business</p>
+      <p><a class="signal" href="mailto:studio@umbra.co">studio@umbra.co</a></p>
+    </div>
+    <div class="mono">
+      <p>Studio</p>
+      <p>14 Rivington Street, London EC2A</p>
+    </div>
+    <div class="mono">
+      <p>Elsewhere</p>
+      <p><a href="#contact">Instagram</a> · <a href="#contact">LinkedIn</a> · <a href="#contact">Are.na</a></p>
+    </div>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ===================================================================
+       01 — HERO
+       =================================================================== -->
+  <section class="hero" id="hero" data-theme="dark" data-rail="01 — Hero" aria-labelledby="hero-title">
+    <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
+
+    <div class="hero__shell">
+
+      <div class="hero__top">
+        <p class="eyebrow mono" data-split="chars">Creative technology studio — London</p>
+        <p class="mono soft" data-reveal style="--d:120ms">Independent · 14 people · Since 2016</p>
+      </div>
+
+      <h1 class="hero__title" id="hero-title">
+        <span class="hero__line mask-line" data-hero-line><span>Making</span></span>
+        <span class="hero__line hero__line--indent mask-line" data-hero-line><span>the <em class="hero__accent">unseen</em></span></span>
+        <span class="hero__line mask-line" data-hero-line><span>Felt.</span></span>
+      </h1>
+
+      <div class="hero__foot">
+        <p class="lead measure" data-reveal style="--d:180ms">
+          We design and engineer digital work that behaves like a physical object —
+          considered, tactile, and fast enough to disappear.
+        </p>
+
+        <div class="meta-row mono hero__meta" data-reveal style="--d:260ms">
+          <span>Art direction</span>
+          <span>Directed motion</span>
+          <span>Real-time 3D</span>
+        </div>
+
+        <div class="badge" data-reveal style="--d:320ms">
+          <svg class="badge__ring" viewBox="0 0 120 120" aria-hidden="true">
+            <defs>
+              <path id="badge-path" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"></path>
+            </defs>
+            <text><textPath href="#badge-path" startOffset="0">Scroll to explore — Umbra Studio — </textPath></text>
+          </svg>
+          <span class="badge__core" aria-hidden="true">↓</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       02 — MANIFESTO
+       =================================================================== -->
+  <section class="section manifesto" id="manifesto" data-theme="light" data-rail="02 — Studio" aria-labelledby="manifesto-title">
+    <div class="shell">
+      <div class="section-head">
+        <h2 class="h2" id="manifesto-title" data-reveal>Studio</h2>
+        <p class="mono soft" data-reveal style="--d:80ms">01 / 06</p>
+      </div>
+
+      <div class="grid-12" style="row-gap: var(--stack)">
+        <div class="manifesto__aside">
+          <p class="mono soft" data-reveal>
+            We are fourteen designers, engineers and artists in Shoreditch. No account
+            managers, no template factory — the people who pitch the work also ship it.
+          </p>
+          <p class="mono faint" data-reveal style="--d:100ms">
+            Clients: cultural institutions, independent labels, and the occasional
+            Formula 1 team that wants something nobody has seen before.
+          </p>
+        </div>
+
+        <p class="manifesto__lead split-words" data-split="words" data-reveal>
+          Every site we ship gets judged twice: once by the people who visit it, and
+          once by the machines that deliver it. We build for both. A point of view in
+          the art direction, a director behind the motion, and code that holds sixty
+          frames a second on a five-year-old phone.
+        </p>
+      </div>
+
+      <ul class="manifesto__facts">
+        <li class="fact" data-reveal>
+          <span class="fact__num">2016</span>
+          <span class="mono soft">Founded in London</span>
+        </li>
+        <li class="fact" data-reveal style="--d:80ms">
+          <span class="fact__num">38</span>
+          <span class="mono soft">Awards &amp; honours</span>
+        </li>
+        <li class="fact" data-reveal style="--d:160ms">
+          <span class="fact__num">0</span>
+          <span class="mono soft">Runtime dependencies</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       03 — WORK (pinned horizontal gallery)
+       =================================================================== -->
+  <section class="section work" id="work" data-theme="dark" data-rail="03 — Selected work" aria-labelledby="work-title">
+    <div class="shell">
+      <div class="section-head">
+        <h2 class="h2" id="work-title" data-reveal>Selected work</h2>
+        <p class="mono work__hint" data-reveal style="--d:60ms">Scroll — the rail moves sideways</p>
+        <p class="mono soft" data-reveal style="--d:80ms">02 / 06 — 05 projects</p>
+      </div>
+    </div>
+
+    <div class="work__viewport" data-hscroll>
+      <div class="work__track" data-hscroll-track>
+
+        <!-- 1 -->
+        <article class="project project--wide" data-cursor-target="view" data-cursor-label="View">
+          <div class="project__media" data-clip>
+            <span class="mono project__year">2026</span>
+            <svg class="project__art" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Halcyon: layered blurred colour fields on black, cut by two pale contour lines.">
+              <defs>
+                <radialGradient id="art1-a" cx="32%" cy="34%" r="62%">
+                  <stop offset="0%" stop-color="#2f4bff"></stop>
+                  <stop offset="62%" stop-color="#2f4bff" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient id="art1-b" cx="74%" cy="70%" r="58%">
+                  <stop offset="0%" stop-color="#ff4d1c"></stop>
+                  <stop offset="66%" stop-color="#ff4d1c" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient id="art1-c" cx="58%" cy="20%" r="46%">
+                  <stop offset="0%" stop-color="#b8a6ff"></stop>
+                  <stop offset="72%" stop-color="#b8a6ff" stop-opacity="0"></stop>
+                </radialGradient>
+                <filter id="art1-blur" x="-25%" y="-25%" width="150%" height="150%">
+                  <feGaussianBlur stdDeviation="42"></feGaussianBlur>
+                </filter>
+                <linearGradient id="art1-shade" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="45%" stop-color="#08090a" stop-opacity="0"></stop>
+                  <stop offset="100%" stop-color="#08090a" stop-opacity="0.6"></stop>
+                </linearGradient>
+              </defs>
+              <rect width="800" height="600" fill="#0a0b12"></rect>
+              <g filter="url(#art1-blur)">
+                <circle cx="245" cy="205" r="230" fill="url(#art1-a)"></circle>
+                <circle cx="590" cy="415" r="250" fill="url(#art1-b)"></circle>
+                <circle cx="480" cy="140" r="190" fill="url(#art1-c)"></circle>
+              </g>
+              <g fill="none" stroke="#f1eee5" stroke-opacity="0.28" stroke-width="1">
+                <path d="M-20 468C180 378 340 558 560 428S820 328 840 298"></path>
+                <path d="M-20 522C200 432 360 612 580 482S830 382 850 352"></path>
+              </g>
+              <rect width="800" height="600" fill="url(#art1-shade)"></rect>
+            </svg>
+          </div>
+          <div class="project__meta">
+            <h3 class="project__title">Halcyon</h3>
+            <p class="mono project__discipline">Digital flagship<br>WebGL · Type</p>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="project project--tall" data-cursor-target="view" data-cursor-label="View">
+          <div class="project__media" data-clip>
+            <span class="mono project__year">2025</span>
+            <svg class="project__art" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Atlas of Noise: a wireframe sphere of lime latitude rings plotted on near-black.">
+              <defs>
+                <radialGradient id="art2-glow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#d8ff3e" stop-opacity="0.22"></stop>
+                  <stop offset="70%" stop-color="#d8ff3e" stop-opacity="0"></stop>
+                </radialGradient>
+              </defs>
+              <rect width="600" height="800" fill="#06100e"></rect>
+              <circle cx="300" cy="400" r="290" fill="url(#art2-glow)"></circle>
+              <g transform="translate(300 400)" fill="none" stroke="#d8ff3e" stroke-opacity="0.5">
+                <circle r="210" stroke-opacity="0.7"></circle>
+                <ellipse rx="210" ry="74"></ellipse>
+                <ellipse rx="210" ry="150"></ellipse>
+                <ellipse rx="210" ry="74" transform="rotate(38)"></ellipse>
+                <ellipse rx="210" ry="74" transform="rotate(76)"></ellipse>
+                <ellipse rx="210" ry="74" transform="rotate(114)"></ellipse>
+                <ellipse rx="210" ry="74" transform="rotate(152)"></ellipse>
+                <ellipse rx="86" ry="210" stroke-opacity="0.35"></ellipse>
+              </g>
+              <g fill="#f1eee5">
+                <circle cx="300" cy="190" r="4"></circle>
+                <circle cx="510" cy="470" r="3"></circle>
+                <circle cx="150" cy="286" r="3"></circle>
+                <circle cx="396" cy="672" r="3.5"></circle>
+              </g>
+              <text x="40" y="748" fill="#f1eee5" fill-opacity="0.55" font-family="ui-monospace, monospace" font-size="14" letter-spacing="3">070.02 — REAL-TIME</text>
+            </svg>
+          </div>
+          <div class="project__meta">
+            <h3 class="project__title">Atlas of Noise</h3>
+            <p class="mono project__discipline">Immersive 3D<br>Three.js · GLSL</p>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="project" data-cursor-target="view" data-cursor-label="View">
+          <div class="project__media" data-clip>
+            <span class="mono project__year">2025</span>
+            <svg class="project__art" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ferrous: a serif A and a grotesque a set enormous against a measured baseline grid.">
+              <rect width="800" height="600" fill="#0d0d0f"></rect>
+              <g stroke="#f1eee5" stroke-opacity="0.1">
+                <path d="M100 0V600M200 0V600M300 0V600M400 0V600M500 0V600M600 0V600M700 0V600"></path>
+              </g>
+              <text x="52" y="452" font-family="Instrument Serif, Georgia, serif" font-size="400" fill="#f1eee5">A</text>
+              <text x="320" y="452" font-family="Inter, Helvetica, sans-serif" font-size="400" font-weight="600" fill="#ff4d1c">a</text>
+              <path d="M52 490H748" stroke="#ff4d1c" stroke-width="1"></path>
+              <text x="52" y="534" fill="#f1eee5" fill-opacity="0.5" font-family="ui-monospace, monospace" font-size="15" letter-spacing="4">FERROUS — DIDONE / GROTESK</text>
+            </svg>
+          </div>
+          <div class="project__meta">
+            <h3 class="project__title">Ferrous</h3>
+            <p class="mono project__discipline">Brand system<br>Type · Motion</p>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="project project--wide" data-cursor-target="view" data-cursor-label="View">
+          <div class="project__media" data-clip>
+            <span class="mono project__year">2026</span>
+            <svg class="project__art" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Tidal: a halftone of blue dots masked into cresting wave bands.">
+              <defs>
+                <pattern id="art4-dots" width="17" height="17" patternUnits="userSpaceOnUse">
+                  <circle cx="8.5" cy="8.5" r="3.4" fill="#2f4bff"></circle>
+                </pattern>
+                <pattern id="art4-dots2" width="17" height="17" patternUnits="userSpaceOnUse">
+                  <circle cx="8.5" cy="8.5" r="2.4" fill="#b8a6ff"></circle>
+                </pattern>
+                <mask id="art4-mask">
+                  <rect width="800" height="600" fill="#000"></rect>
+                  <g fill="#fff">
+                    <path d="M-40 300C160 180 300 420 520 300S820 180 880 240v90C700 400 520 200 300 340S80 420-40 380z"></path>
+                    <path d="M-40 430C180 320 320 560 540 430S840 320 880 380v70C680 540 520 340 300 470S60 560-40 510z" opacity="0.75"></path>
+                  </g>
+                </mask>
+              </defs>
+              <rect width="800" height="600" fill="#05070d"></rect>
+              <g mask="url(#art4-mask)">
+                <rect width="800" height="600" fill="url(#art4-dots)"></rect>
+                <rect width="800" height="600" fill="url(#art4-dots2)" opacity="0.55"></rect>
+              </g>
+              <text x="40" y="560" fill="#f1eee5" fill-opacity="0.5" font-family="ui-monospace, monospace" font-size="14" letter-spacing="3">CHAPTER 04 — TIDE TABLES</text>
+            </svg>
+          </div>
+          <div class="project__meta">
+            <h3 class="project__title">Tidal</h3>
+            <p class="mono project__discipline">Interactive documentary<br>Scroll · Canvas</p>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="project project--tall" data-cursor-target="view" data-cursor-label="View">
+          <div class="project__media" data-clip>
+            <span class="mono project__year">2024</span>
+            <svg class="project__art" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Nocturne FM: two overlapping sets of thin concentric rings producing a moiré interference.">
+              <rect width="600" height="800" fill="#0b0a0d"></rect>
+              <g transform="translate(230 340)" fill="none" stroke="#ff4d1c" stroke-width="1">
+                <circle r="30" stroke-opacity="0.85"></circle>
+                <circle r="58" stroke-opacity="0.8"></circle>
+                <circle r="86" stroke-opacity="0.75"></circle>
+                <circle r="114" stroke-opacity="0.7"></circle>
+                <circle r="142" stroke-opacity="0.62"></circle>
+                <circle r="170" stroke-opacity="0.54"></circle>
+                <circle r="198" stroke-opacity="0.46"></circle>
+                <circle r="226" stroke-opacity="0.38"></circle>
+                <circle r="254" stroke-opacity="0.3"></circle>
+                <circle r="282" stroke-opacity="0.22"></circle>
+              </g>
+              <g transform="translate(420 470)" fill="none" stroke="#d8ff3e" stroke-width="1">
+                <circle r="26" stroke-opacity="0.7"></circle>
+                <circle r="52" stroke-opacity="0.66"></circle>
+                <circle r="78" stroke-opacity="0.6"></circle>
+                <circle r="104" stroke-opacity="0.54"></circle>
+                <circle r="130" stroke-opacity="0.46"></circle>
+                <circle r="156" stroke-opacity="0.4"></circle>
+                <circle r="182" stroke-opacity="0.32"></circle>
+                <circle r="208" stroke-opacity="0.24"></circle>
+              </g>
+              <g stroke="#f1eee5" stroke-opacity="0.35">
+                <path d="M0 96h600M0 400h600M0 704h600"></path>
+              </g>
+              <text x="36" y="756" fill="#f1eee5" fill-opacity="0.5" font-family="ui-monospace, monospace" font-size="14" letter-spacing="3">88.7 FM — LIVE</text>
+            </svg>
+          </div>
+          <div class="project__meta">
+            <h3 class="project__title">Nocturne FM</h3>
+            <p class="mono project__discipline">Audio-reactive identity<br>Web Audio · SVG</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       04 — CAPABILITIES
+       =================================================================== -->
+  <section class="section capabilities" id="capabilities" data-theme="light" data-rail="04 — Capabilities" aria-labelledby="capabilities-title">
+    <div class="shell">
+      <div class="section-head">
+        <h2 class="h2" id="capabilities-title" data-reveal>Capabilities</h2>
+        <p class="mono soft" data-reveal style="--d:80ms">03 / 06 — Six disciplines</p>
+      </div>
+
+      <div class="caps" data-caps>
+        <div class="cap__preview" data-caps-preview aria-hidden="true"><span data-caps-preview-label>Art direction</span></div>
+
+        <div class="cap" data-reveal data-peek="#2f4bff" data-peek-label="Art direction">
+          <div class="cap__row">
+            <span class="mono cap__num">01</span>
+            <h3 class="cap__title">Art direction</h3>
+            <div class="cap__tags"><span class="tag">Concept</span><span class="tag">Identity</span><span class="tag">Editorial</span></div>
+          </div>
+          <div class="cap__detail"><div><p>One idea, carried all the way through. We decide what the work is about before deciding how it moves — grids, type scales, palette and the moments where the grid is allowed to break.</p></div></div>
+        </div>
+
+        <div class="cap" data-reveal style="--d:60ms" data-peek="#ff4d1c" data-peek-label="Creative dev">
+          <div class="cap__row">
+            <span class="mono cap__num">02</span>
+            <h3 class="cap__title">Creative development</h3>
+            <div class="cap__tags"><span class="tag">Front-end</span><span class="tag">Canvas</span><span class="tag">Performance</span></div>
+          </div>
+          <div class="cap__detail"><div><p>Hand-written front-end that survives contact with real devices. No framework tax where it is not earned, no 4MB bundle for a landing page. This site is the demo: zero runtime dependencies.</p></div></div>
+        </div>
+
+        <div class="cap" data-reveal style="--d:120ms" data-peek="#b8a6ff" data-peek-label="WebGL">
+          <div class="cap__row">
+            <span class="mono cap__num">03</span>
+            <h3 class="cap__title">WebGL &amp; shaders</h3>
+            <div class="cap__tags"><span class="tag">GLSL</span><span class="tag">Three.js</span><span class="tag">Ray marching</span></div>
+          </div>
+          <div class="cap__detail"><div><p>Real-time graphics written to run everywhere, including mid-range Android. Complexity is budgeted per frame: we would rather ship one perfect effect at 60fps than five at nineteen.</p></div></div>
+        </div>
+
+        <div class="cap" data-reveal style="--d:180ms" data-peek="#d8ff3e" data-peek-label="Motion">
+          <div class="cap__row">
+            <span class="mono cap__num">04</span>
+            <h3 class="cap__title">Motion systems</h3>
+            <div class="cap__tags"><span class="tag">Choreography</span><span class="tag">Scroll</span><span class="tag">Transitions</span></div>
+          </div>
+          <div class="cap__detail"><div><p>Motion with a director, not a library. Every transition answers a question — where did I come from, where am I going, what changed — and there is always a reduced-motion path through it.</p></div></div>
+        </div>
+
+        <div class="cap" data-reveal style="--d:240ms" data-peek="#2f4bff" data-peek-label="Interaction">
+          <div class="cap__row">
+            <span class="mono cap__num">05</span>
+            <h3 class="cap__title">Interaction design</h3>
+            <div class="cap__tags"><span class="tag">Prototyping</span><span class="tag">Accessibility</span><span class="tag">WCAG 2.2</span></div>
+          </div>
+          <div class="cap__detail"><div><p>Interfaces prototyped in the browser, not in a deck. Keyboard paths, focus order and screen-reader labels are part of the design review, not a cleanup ticket.</p></div></div>
+        </div>
+
+        <div class="cap" data-reveal style="--d:300ms" data-peek="#ff4d1c" data-peek-label="Systems">
+          <div class="cap__row">
+            <span class="mono cap__num">06</span>
+            <h3 class="cap__title">Design systems</h3>
+            <div class="cap__tags"><span class="tag">Tokens</span><span class="tag">Docs</span><span class="tag">Handover</span></div>
+          </div>
+          <div class="cap__detail"><div><p>Tokens, components and documentation your team can actually extend after we leave. The handover is a working repository, not a zip of screenshots.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       05 — PROCESS
+       =================================================================== -->
+  <section class="section process" id="process" data-theme="dark" data-rail="05 — Process" aria-labelledby="process-title">
+    <div class="shell">
+      <div class="section-head">
+        <h2 class="h2" id="process-title" data-reveal>Process</h2>
+        <p class="mono soft" data-reveal style="--d:80ms">04 / 06 — Ten weeks, typically</p>
+      </div>
+
+      <div class="grid-12 process__grid">
+        <div class="process__aside">
+          <p class="lead measure-tight" data-reveal>Four movements. One continuous conversation.</p>
+          <p class="mono soft" data-reveal style="--d:100ms">
+            Fixed fee, fixed dates, no surprise change orders. You see the work in the
+            browser from week two onwards.
+          </p>
+          <div class="process__meter" data-reveal style="--d:160ms"><i data-process-meter></i></div>
+        </div>
+
+        <div class="process__steps">
+          <article class="step" data-reveal>
+            <span class="step__num">01</span>
+            <div class="step__body">
+              <h3 class="h3">Discovery &amp; direction</h3>
+              <p>Two weeks of interrogation. We read everything you have, talk to the people who will use it, and come back with three directions that are genuinely different — not three shades of the same idea.</p>
+            </div>
+          </article>
+
+          <article class="step" data-reveal>
+            <span class="step__num">02</span>
+            <div class="step__body">
+              <h3 class="h3">Art direction</h3>
+              <p>We choose one direction and push it hard: type, grid, palette, motion language, and the first real screens. Everything you see is built at the true size in the browser.</p>
+            </div>
+          </article>
+
+          <article class="step" data-reveal>
+            <span class="step__num">03</span>
+            <div class="step__body">
+              <h3 class="h3">Engineering</h3>
+              <p>The build is the design review. Shaders, scroll choreography and transitions are tuned frame by frame on real hardware, with a performance budget we refuse to negotiate.</p>
+            </div>
+          </article>
+
+          <article class="step" data-reveal>
+            <span class="step__num">04</span>
+            <div class="step__body">
+              <h3 class="h3">Launch &amp; care</h3>
+              <p>We ship, watch the graphs, and stay for the first month. After that you get the repository, the documentation, and a standing invitation to call.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       06 — RECOGNITION
+       =================================================================== -->
+  <section class="section recognition" id="recognition" data-theme="light" data-rail="06 — Recognition" aria-labelledby="recognition-title">
+    <div class="shell">
+      <div class="section-head">
+        <h2 class="h2" id="recognition-title" data-reveal>Recognition</h2>
+        <p class="mono soft" data-reveal style="--d:80ms">05 / 06 — Selected honours</p>
+      </div>
+    </div>
+
+    <div class="recognition__marquee">
+      <div class="marquee" data-marquee>
+        <div class="marquee__inner">
+          <div class="marquee__track" data-marquee-track>
+            <span class="marquee__item">Site of the Day</span>
+            <span class="marquee__item marquee__item--alt">Awwwards</span>
+            <span class="marquee__item">Developer Award</span>
+            <span class="marquee__item marquee__item--alt">FWA of the Day</span>
+            <span class="marquee__item">Honourable Mention</span>
+            <span class="marquee__item marquee__item--alt">CSS Design Awards</span>
+            <span class="marquee__item">Site of the Year — Nominee</span>
+            <span class="marquee__item marquee__item--alt">Webby</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shell">
+      <ul class="awards" data-awards>
+        <li class="award" data-reveal>
+          <span class="mono award__year">2026</span>
+          <span class="award__name">Halcyon — digital flagship</span>
+          <span class="mono award__result">Awwwards Site of the Day · Developer Award · FWA</span>
+        </li>
+        <li class="award" data-reveal>
+          <span class="mono award__year">2026</span>
+          <span class="award__name">Tidal — interactive documentary</span>
+          <span class="mono award__result">CSS Design Awards Website of the Month</span>
+        </li>
+        <li class="award" data-reveal>
+          <span class="mono award__year">2025</span>
+          <span class="award__name">Atlas of Noise — immersive 3D</span>
+          <span class="mono award__result">Awwwards Site of the Day · Honourable Mention</span>
+        </li>
+        <li class="award" data-reveal>
+          <span class="mono award__year">2025</span>
+          <span class="award__name">Studio site — umbra.co</span>
+          <span class="mono award__result">CSS Design Awards Innovation Award</span>
+        </li>
+        <li class="award" data-reveal>
+          <span class="mono award__year">2024</span>
+          <span class="award__name">Nocturne FM — audio-reactive identity</span>
+          <span class="mono award__result">Awwwards Site of the Day · FWA of the Day</span>
+        </li>
+        <li class="award" data-reveal>
+          <span class="mono award__year">2024</span>
+          <span class="award__name">Ferrous — brand &amp; design system</span>
+          <span class="mono award__result">Type Directors Club — Certificate of Excellence</span>
+        </li>
+      </ul>
+
+      <p class="mono soft measure" style="margin-top: clamp(2rem, 5vw, 3.5rem)" data-reveal>
+        Jurors score three things: art direction, directed motion and performance on real
+        hardware. Two out of three still loses.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       07 — CONTACT / FOOTER
+       =================================================================== -->
+  <footer class="footer" id="contact" data-theme="dark" data-rail="07 — Contact" aria-labelledby="contact-title">
+    <div class="shell">
+      <div class="section-head">
+        <h2 class="h2" id="contact-title" data-reveal>Contact</h2>
+        <p class="mono soft" data-reveal style="--d:80ms">06 / 06 — Currently booking Q1 2027</p>
+      </div>
+
+      <p class="footer__cta" aria-hidden="true">
+        <span class="footer__cta-line mask-line"><span>Let's build</span></span>
+        <span class="footer__cta-line footer__cta-line--shift mask-line"><span>the unseen</span></span>
+      </p>
+
+      <div class="grid-12" style="margin-top: clamp(2.4rem, 6vw, 4.5rem); row-gap: var(--stack)">
+        <div style="grid-column: 1 / 8; display: flex; flex-direction: column; gap: 1.4rem">
+          <p class="eyebrow mono" data-reveal>New business</p>
+          <a class="footer__email" href="mailto:studio@umbra.co" data-reveal style="--d:60ms" data-cursor-target="blend">studio@umbra.co</a>
+          <p class="mono soft" data-reveal style="--d:120ms">Tell us the deadline and the constraint. We will tell you what is possible.</p>
+        </div>
+
+        <div style="grid-column: 8 / -1; display: flex; align-items: flex-end; justify-content: flex-end" data-reveal>
+          <a class="btn" href="mailto:studio@umbra.co?subject=Project%20enquiry" data-magnetic>
+            <span class="btn__fill" aria-hidden="true"></span>
+            <span class="link-swap"><span class="link-swap__inner">Start a project</span></span>
+            <svg class="btn__arrow" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" fill="none" stroke="currentColor"><path d="M1 11 11 1M4 1h7v7"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h3>Studio</h3>
+          <address>
+            14 Rivington Street<br>
+            London EC2A 3DU<br>
+            United Kingdom
+          </address>
+        </div>
+        <div class="footer__col">
+          <h3>Contact</h3>
+          <a href="mailto:studio@umbra.co">studio@umbra.co</a>
+          <a href="tel:+442071234567">+44 20 7123 4567</a>
+          <a href="#contact">Press kit (2.4MB)</a>
+        </div>
+        <div class="footer__col">
+          <h3>Elsewhere</h3>
+          <a href="#contact">Instagram</a>
+          <a href="#contact">LinkedIn</a>
+          <a href="#contact">Are.na</a>
+        </div>
+        <div class="footer__col">
+          <h3>Index</h3>
+          <a href="#work">Work</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#process">Process</a>
+        </div>
+      </div>
+
+      <div class="footer__bar mono">
+        <span>© 2026 Umbra Studio Ltd</span>
+        <span data-clock>--:--:--</span>
+        <span>51.5072°N, 0.1276°W</span>
+        <span>Zero dependencies · 4 stylesheets · 8 scripts</span>
+        <button class="footer__to-top mono" type="button" data-to-top>
+          <svg width="11" height="12" viewBox="0 0 11 12" fill="none" stroke="currentColor" aria-hidden="true"><path d="M5.5 12V1M1 5.5 5.5 1 10 5.5"></path></svg>
+          Back to top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script src="js/core.js"></script>
+<script src="js/reveal.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/preloader.js"></script>
+<script src="js/chrome.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/hero-gl.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>UMBRA® — QA harness</title>
+<style>
+  html, body { margin: 0; background: #141414; color: #ddd; font: 11px/1.4 ui-monospace, monospace; }
+  iframe { border: 0; display: block; background: #000; }
+  h2 { font: 400 11px/1.4 ui-monospace, monospace; margin: 10px 8px 4px; color: #ff4d1c; letter-spacing: .1em; }
+  .box { overflow: hidden; outline: 1px solid #444; margin: 0 8px; }
+  /* 1440 desktop at 0.7 — real desktop media queries, readable detail */
+  .box--d { width: 1008px; height: 630px; }
+  .box--d iframe { width: 1440px; height: 900px; transform: scale(0.7); transform-origin: top left; }
+  /* 420 phone at 1:1 */
+  .box--m { width: 420px; height: 900px; }
+  .box--m iframe { width: 420px; height: 900px; }
+</style>
+</head>
+<body>
+<h2>1440 × 900 @ 0.7 — desktop</h2>
+<div class="box box--d"><iframe id="d" src="/" title="desktop"></iframe></div>
+
+<h2>420 × 900 @ 1 — phone</h2>
+<div class="box box--m"><iframe id="m" src="/" title="phone"></iframe></div>
+</body>
+</html>
